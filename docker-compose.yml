@@ -1,0 +1,13 @@
+services:
+  uptime_kuma:
+    image: louislam/uptime-kuma:1
+    ports:
+      - 80:3001
+    restart: always
+    volumes:
+      - uptime_kuma_data:/app/data
+
+volumes:
+  uptime_kuma_data:
+    driver: local
+
